@@ -15,6 +15,12 @@
 ##     1) `get` - get the value of the matrix
 ##     2) `setinv` - set the value of the inverse
 ##     3) `getinv` - get the value of the inverse
+##
+##      Input : x - A non-singular/invertible matrix whose inverse
+##                  is to be calculated
+##                  Default value - matrix()
+##   
+##      Output: list of the functions
 #-------------------------------------------------------------------------------
 makeCacheMatrix <- function(x = matrix()) {
         
@@ -44,6 +50,11 @@ makeCacheMatrix <- function(x = matrix()) {
 ## the cache and skips the computation. Otherwise, it calculates the inverse 
 ## of the data and sets the value of the inverse in the cache via the 
 ## `solve` function.
+##
+##      Input : x - The special matrix returned by the function makeCacheMatrix,
+##                  which is a list of functions
+##
+##      Output : The inverse of the matrix
 #-------------------------------------------------------------------------------
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of special matrix 'x' received
