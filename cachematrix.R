@@ -58,10 +58,9 @@ cacheSolve <- function(x, ...) {
                 return(inverse)
         }
         
-        ## If the inverse is not cached then calculate and cache the inverse
+        ## If the inverse is not cached then calculate and cache the inverse; 
+        ## assuming that the matrix is non-singular
         data <- x$get()
-        
-        ## Assuming the matrix is invertible
         inverse <- solve(data, ...)
         x$setinv(inverse)
         
